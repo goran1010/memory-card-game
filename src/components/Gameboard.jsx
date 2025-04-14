@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import getPokemonList from "../scripts/getPokemonCards";
+import randomizeImgPositions from "../scripts/randomizeImgPositions";
 
 export default function Gameboard({ changeCurrentScore, endGame }) {
   const [allPokemonCards, setAllPokemonCards] = useState([]);
@@ -60,6 +61,7 @@ export default function Gameboard({ changeCurrentScore, endGame }) {
                   changeCurrentScore();
                   pokemonCard.isClicked = true;
                 }
+                setAllPokemonCards(randomizeImgPositions(allPokemonCards));
               }}
             />
             <p>{pokemonCard.name}</p>
