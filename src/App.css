@@ -1,3 +1,57 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  margin: 0 20%;
+  justify-content: center;
+  background-color: darkgray;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 50px;
+}
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.explain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-style: italic;
+}
+.gameboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+.gameboard > div {
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 0 10px lightgray;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+  font-weight: bold;
+}
 .spinner {
   width: 50px;
   height: 50px;
