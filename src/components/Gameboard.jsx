@@ -46,7 +46,7 @@ export default function Gameboard({ changeCurrentScore, endGame }) {
   }
 
   return (
-    <div>
+    <div className="gameboard">
       {allPokemonCards.map((pokemonCard) => {
         return (
           <div key={pokemonCard.id}>

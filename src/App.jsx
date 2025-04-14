@@ -16,7 +16,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="app">
       <Scoreboard currentScore={currentScore} bestScore={bestScore} />
       <Gameboard changeCurrentScore={changeCurrentScore} endGame={endGame} />
     </div>
