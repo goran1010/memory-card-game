@@ -1,37 +1,24 @@
-import { useEffect, useState } from "react";
 import "./App.css";
-import getPokemonList from "./scripts/getPokemonCards";
 import Scoreboard from "./components/Scoreboard";
 import Gameboard from "./components/Gameboard";
+import { useState } from "react";
 
 function App() {
-  const [allPokemonCards, setAllPokemonCards] = useState([]);
+  const [currentScore, setCurrentScore] = useState(0);
+  const [bestScore, setBestScore] = useState(0);
 
-  useEffect(() => {
-    async function getPokemonCardImages() {
-      try {
-        const allPokemonList = getPokemonList();
-
-        const fetchedCards = await Promise.all(
-          allPokemonList.map(async (pokemon) => {
-            const response = await fetch(pokemon.link);
-            const cardImage = await response.json();
-            return { ...pokemon, image: cardImage.sprites.front_default };
-          })
-        );
-        console.log(fetchedCards);
-        setAllPokemonCards(fetchedCards);
-      } catch (error) {
-        console.error(error);
-      }
-    }
-    getPokemonCardImages();
-  }, []);
+  function changeCurrentScore() {
+    setCurrentScore(currentScore + 1);
+  }
+  function endGame() {
+    if (currentScore > bestScore) setBestScore(currentScore);
+    setCurrentScore(0);
+  }
 
   return (
     <div>
-      <Scoreboard />
-      <Gameboard allPokemonCards={allPokemonCards} />
+      <Scoreboard currentScore={currentScore} bestScore={bestScore} />
+      <Gameboard changeCurrentScore={changeCurrentScore} endGame={endGame} />
     </div>
   );
 }
