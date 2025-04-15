@@ -82,10 +82,10 @@ body {
     max-width: 50px;
     max-height: 50px;
   }
-  /* .gameboard > div img {
-    object-fit: contain;
-    object-position: center;
-  } */
+  .gameboard > div {
+    width: 60px;
+    overflow: hidden;
+  }
   h2 {
     font-size: 15px;
   }
@@ -97,7 +97,6 @@ body {
   }
   .app {
     gap: 10px;
-    justify-content: space-around;
   }
   .scoreboard,
   .gameboard {
