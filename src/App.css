@@ -20,7 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: 50px;
+  justify-content: center;
 }
 .scoreboard {
   display: flex;
@@ -28,6 +28,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  text-align: center;
 }
 .explain {
   display: flex;
@@ -40,6 +41,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
 }
+
 .gameboard > div {
   cursor: pointer;
   border-radius: 5px;
@@ -68,5 +70,28 @@ body {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .gameboard > div img {
+    max-width: 40px;
+    max-height: 40px;
+  }
+  h2 {
+    font-size: 15px;
+  }
+  p {
+    font-size: 12px;
+  }
+  .gameboard {
+    font-size: 5px;
+  }
+  .app {
+    gap: 10px;
+  }
+  .scoreboard,
+  .gameboard {
+    gap: 3px;
   }
 }
