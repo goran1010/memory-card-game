@@ -13,7 +13,7 @@ body {
   min-height: 100vh;
   margin: 0 20%;
   justify-content: center;
-  background-color: darkgray;
+  background: linear-gradient(135deg, #d3d3d3, #a18282);
 }
 
 .app {
@@ -21,20 +21,6 @@ body {
   flex-direction: column;
   flex: 1;
   justify-content: center;
-}
-.scoreboard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  text-align: center;
-}
-.explain {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-style: italic;
 }
 .gameboard {
   display: grid;
@@ -102,4 +88,33 @@ body {
   .gameboard {
     gap: 3px;
   }
+}
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  margin: 0 auto 20px auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.scoreboard .explain {
+  font-style: italic;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.scoreboard h2 {
+  margin: 5px 0;
+  font-size: 18px;
+  color: #222;
+  font-weight: 600;
 }
