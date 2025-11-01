@@ -4,6 +4,8 @@ A simple memory card game built with **React** and **Vite**, where players try t
 
 Using [PokeAPI](`https://pokeapi.co) to `fetch` Pokémon cards.
 
+Live preview: https://memory-card-top-project.netlify.app/
+
 ## Installation
 
 ```bash
